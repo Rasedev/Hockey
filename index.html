@@ -1,137 +1,962 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" >
-<head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hockey</title>
-    <link rel="shortcut icon" href="./Images/2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Images/2.png" type="image/x-icon" />
 
     <!-- Daisy Ui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- icofont icons -->
     <link rel="stylesheet" href="./css/icofont.min.css" />
 
     <!-- goggle Manrope fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <script>
-        tailwind.config = {
-          theme: {
-            maxWidth: {
-            container: '1170px',
+      tailwind.config = {
+        theme: {
+          maxWidth: {
+            container: "1170px",
+          },
+          colors: {
+            first: "#131318",
+            btn: "#FF4240",
+            overlay: "#FF4240",
+            second: "#424247",
+            common: "#FF4240",
+            silver: "#0D0D127F",
+            color: "#0D0D1266",
+            para: "#13131899",
+            icon: "#103E13",
+          },
+          fontFamily: {
+            manrope: ["Manrope", "sans-serif"],
+          },
         },
-        colors: {
-          first: '#131318',
-          btn: '#FF4240',
-          overlay: '#FF4240',
-          second: '#424247',
-         common: '#FF4240',
-          silver: '#F5F7FA',
-          color: 'text-gray-900',
-          para: '#717171',
-          icon: '#103E13'
-        },
-        fontFamily: {
-          manrope: ['Manrope', 'sans-serif'],
-          
-        },
-          }
-        }
-      </script>
-</head>
-<body>
-   <header class="sm:px-5">
-    <section class="container mx-auto lg:px-32 sm:px-2">
+      };
+    </script>
+  </head>
+  <body>
+    <!-- NAVBAR-START -->
+    <header class="sm:px-5">
+      <section class="container mx-auto lg:px-32 sm:px-2">
         <div class="navbar bg-base-100 pt-10">
-            <div class="navbar-start sm:block">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a class="font-manrope text-base font-bold text-btn hover:bg-sky-700 ">Home</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">About</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">Pages</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">Blog</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">Contact</a></li>
-                  
-                </ul>
+          <div class="navbar-start sm:block">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
               </div>
-              <a class=" lg:text-4xl sm:text-3xl font-extrabold font-manrope text-first">Hockey <span class="text-btn">’</span>s</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a class="font-manrope text-base font-bold text-btn hover:bg-sky-700 ">Home</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">About</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">Pages</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">Blog</a></li>
-                  <li><a class="font-manrope text-base font-normal text-second">Contact</a></li>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a class="font-manrope text-base font-bold text-btn">Home</a>
+                </li>
+                <li>
+                  <a class="font-manrope text-base font-normal text-second"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a class="font-manrope text-base font-normal text-second"
+                    >Pages</a
+                  >
+                </li>
+                <li>
+                  <a class="font-manrope text-base font-normal text-second"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="font-manrope text-base font-normal text-second"
+                    >Contact</a
+                  >
+                </li>
               </ul>
             </div>
-            <div class="navbar-end ">
-                <a href="" class="px-5 "><i class="icofont-search "></i></a>
-              <a class="lg:text-xl sm:text-lg btn bg-btn  text-[#fff] px-3 py-2">Get Ticket</a>
+            <a
+              class="lg:text-4xl sm:text-3xl font-extrabold font-manrope text-first"
+              >Hockey <span class="text-btn">’</span>s</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li>
+                <a
+                  class="font-manrope text-base font-bold text-btn hover:bg-sky-700"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="font-manrope text-base font-normal text-second"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a class="font-manrope text-base font-normal text-second"
+                  >Pages</a
+                >
+              </li>
+              <li>
+                <a class="font-manrope text-base font-normal text-second"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a class="font-manrope text-base font-normal text-second"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a href="" class="px-5"><i class="icofont-search"></i></a>
+            <a class="lg:text-xl sm:text-lg btn bg-btn text-[#fff] px-3 py-2"
+              >Get Ticket</a
+            >
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- NAVBAR-ENDS -->
+
+    <main class="sm:px-5">
+      <!-- SLIDER-START -->
+
+      <section class="container mx-auto lg:px-32 px-5 pb-[100px]">
+        <div class="carousel h-[550px] rounded-2xl mt-12">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./Images/1.png" class=" sm:px-5  rounded-2xl" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-10 right-10 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+            <div
+              class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-4 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]"
+            >
+              <h1
+                class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 lg:pt-4 pt-4"
+              >
+                Meet all the heroes from the field
+              </h1>
+              <p
+                class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]"
+              >
+                Hockey Heroes aimed at beginners helping develop some physical
+                hockey superpowers such as ...
+              </p>
             </div>
           </div>
-    </section>
-   </header>
-  <main class="sm:px-5">
-    <section class="container mx-auto lg:px-32 px-5">
-        <div class="carousel  h-[550px] rounded-2xl mt-12 ">
-            <div id="slide1" class="carousel-item relative w-full ">
-              <img src="./Images/1.png" class="w-full sm:px-5 object-cover" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-10 right-10 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-              <div class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-8 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]">
-                <h1 class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 pt-4">Meet all the heroes from the field</h1>
-                <p class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]">Hockey Heroes aimed at beginners  helping develop some physical hockey superpowers such as ...</p>
-              </div>
-            </div> 
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="./Images/2.png" class="w-full object-cover" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-              <div class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-8 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]">
-                <h1 class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 pt-4">Meet all the heroes from the field</h1>
-                <p class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]">Hockey Heroes aimed at beginners  helping develop some physical hockey superpowers such as ...</p>
-              </div>
-            </div> 
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="./Images/3.png" class="w-full object-cover" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-              <div class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-8 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]">
-                <h1 class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 pt-4">Meet all the heroes from the field</h1>
-                <p class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]">Hockey Heroes aimed at beginners  helping develop some physical hockey superpowers such as ...</p>
-              </div>
-            </div> 
-            <div id="slide4" class="carousel-item relative w-full">
-              <img src="./Images/4.png" class="w-full object-cover" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" class="btn btn-circle">❮</a> 
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
-              <div class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-8 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]">
-                <h1 class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 pt-4">Meet all the heroes from the field</h1>
-                <p class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]">Hockey Heroes aimed at beginners  helping develop some physical hockey superpowers such as ...</p>
-              </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./Images/2.png" class="w-full object-cover" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+            <div
+              class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-8 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]"
+            >
+              <h1
+                class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 pt-4"
+              >
+                Meet all the heroes from the field
+              </h1>
+              <p
+                class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]"
+              >
+                Hockey Heroes aimed at beginners helping develop some physical
+                hockey superpowers such as ...
+              </p>
             </div>
           </div>
-    </section>
-  </main>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./Images/3.png" class="w-full object-cover" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+            <div
+              class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-8 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]"
+            >
+              <h1
+                class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 pt-4"
+              >
+                Meet all the heroes from the field
+              </h1>
+              <p
+                class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]"
+              >
+                Hockey Heroes aimed at beginners helping develop some physical
+                hockey superpowers such as ...
+              </p>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="./Images/4.png" class="w-full object-cover" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+            <div
+              class="absolute lg:top-[66%] lg:right-[4%] bg-first inline-flex flex-col items-start lg:w-[455px] h-[165px] rounded-2xl lg:p-8 p-4 sm:absolute bottom-[-40%] w-full mx-auto right-[0%]"
+            >
+              <h1
+                class="lg:text-2xl text-[15px] font-extrabold font-manrope text-[#fff] pb-4 pt-4"
+              >
+                Meet all the heroes from the field
+              </h1>
+              <p
+                class="lg:text-base text-[13px] font-medium font-manrope text-[#FFFFFF99]"
+              >
+                Hockey Heroes aimed at beginners helping develop some physical
+                hockey superpowers such as ...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDER-ENDS -->
+
+      <!-- CLUB-START -->
+      <section class="container mx-auto lg:px-32 px-5 pb-[100px]">
+        <div class="border-dashed border-y-[1px] border-[#13131833]">
+          <h1
+            class="text-first font-manrope lg:text-4xl sm:text-[22px] text-center font-extrabold pt-[32px]"
+          >
+            Professional Hockeys Club
+          </h1>
+          <p
+            class="lg:w-[607px] sm:w-auto mx-auto text-para font-manrope text-base font-medium text-center pt-[24px] pb-[32px] "
+          >
+            If you have a passion for hockey and exceptional skills, pursuing a
+            professional hockey career may be the next best step for you....
+          </p>
+        </div>
+
+        <div class="lg:flex  justify-between items-center pt-12 gap-8">
+          <div class="w-full h[239px] text-center mx-auto py-4">
+            <div
+              class="radial-progress text-error"
+              style="--value: 87"
+              role="progressbar"
+            >
+              87%
+            </div>
+            <h1 class="lg:text-xl text-[15px] font-semibold font-manrope text-first pb-4 lg:pt-6 pt-6">Prayer Facility</h1>
+            <p class=" lg:text-sm text-[15px] font-normal font-manrope text-silver  ">
+              Experience rich connect students withfaith in Worcester.
+            </p>
+          </div>
+
+          <div class="w-full h[239px] mx-auto text-center py-4">
+            <div
+              class="radial-progress text-[#49D293]"
+              style="--value: 95"
+              role="progressbar"
+            >
+              95%
+            </div>
+            <h1 class="lg:text-xl text-[15px] font-semibold font-manrope text-first pb-4 lg:pt-6 pt-6">Experienced Coach</h1>
+            <p class=" lg:text-sm text-[15px] font-normal font-manrope text-silver">
+              Experience rich connect students withfaith in Worcester.
+            </p>
+          </div>
+
+          <div class="w-full h[239px]  mx-auto text-center py-4">
+            <div
+              class="radial-progress text-[#F99808]"
+              style="--value: 90"
+              role="progressbar"
+            >
+              90%
+            </div>
+            <h1 class="lg:text-xl text-[15px] font-semibold font-manrope text-first pb-4 lg:pt-6 pt-6">Senior Player</h1>
+            <p class=" lg:text-sm text-[15px] font-normal font-manrope text-silver">
+              Experience rich connect students withfaith in Worcester.
+            </p>
+          </div>
+
+          <div class="w-full h[239px]  mx-auto text-center py-4">
+            <div
+              class="radial-progress text-[#4C8DF1]"
+              style="--value: 80"
+              role="progressbar"
+            >
+              80%
+            </div>
+            <h1 class="lg:text-xl text-[15px] font-semibold font-manrope text-first pb-4 lg:pt-6 pt-6">Training Ground</h1>
+            <p class=" lg:text-sm text-[15px] font-normal font-manrope text-silver">
+              Experience rich connect students withfaith in Worcester.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- CLUB-ENDS -->
+
+      <!-- PROGRAMM-START -->
+
+      <section class="container mx-auto lg:px-32 px-5 pb-[100px]">
+        <div class="border-dashed border-y-[1px] border-[#13131833]">
+          <h1 class="text-first font-manrope lg:text-4xl sm:text-[22px] text-center font-extrabold pt-[32px]">Program Sections</h1>
+          <p class="lg:w-[607px] sm:w-auto mx-auto text-para font-manrope text-base font-medium text-center pt-[24px] pb-[32px]">
+            Developing a new Hockey club or association requires a systematic
+            approach. Your objective should not only be to start a new club but
+            to bring it to a state ...
+          </p>
+        </div>
+        <!-- 1 -->
+        <div class="lg:flex  justify-between  gap-5 pb-[42px] pt-12 ">
+          <div class="relative ">
+            <img src="./Images/2.png" alt="" class="w-[500px] h-[338px] rounded-2xl bg-[#0D0D127F] sm:mb-6" />
+            <div class="inline-flex flex-col items-start absolute top-0 left-0">
+              <h1 class="text-[#fff] font-manrope lg:text-[28px] text-justify font-extrabold lg:pt-[95px] pt-[70px] pb-4 lg:pl-[42px] pl-[20px]">Junior Program</h1>
+
+            <p class="lg:w-[495px] sm:w-auto mx-auto text-[#fff] font-manrope lg:text-base text-justify font-medium pb-8 lg:px-12 px-5 "> 
+              Forestville Hockey Club fields teams in all junior age groups in the Hockey SA Metro Competition which runs during terms 2 and 3 of the school year.</p>
+            <a class="lg:text-xl text-lg btn bg-btn  text-[#fff] lg:px-5 lg:py-[10px] lg:ml-[42px] ml-[20px] lg:pb-10 ">Register Now!</a>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="relative lg:mt-0 mt-5">
+            <img src="./Images/3.png" alt="" class="w-[500px] h-[338px] rounded-2xl bg-[#0D0D127F] " />
+            <div class="inline-flex flex-col items-start absolute top-0  left-0">
+              <h1 class="text-[#fff] font-manrope lg:text-[28px] text-justify font-extrabold lg:pt-[95px] pt-[70px] pb-4 lg:pl-[42px] pl-[20px]">Junior Program</h1>
+
+            <p class="lg:w-[495px] sm:w-auto mx-auto text-[#fff] font-manrope lg:text-base sm:text-[14px] text-justify font-medium pb-8 lg:px-12 px-5">  
+            Forestville Hockey Club fields teams in all junior age groups in the Hockey SA Metro Competition which runs during terms 2 and 3 of the school year.</p>
+            <a class="lg:text-xl text-lg btn bg-btn  text-[#fff] lg:px-5 lg:py-[10px] lg:ml-[42px] ml-[20px] lg:pb-10 ">Register Now!</a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="relative ">
+          <img src="./Images/4.png" alt="" class="lg:w-[100%] w-auto h-[450px] rounded-2xl  object-cover " />
+          <div class="absolute top-[57px] left-0">
+            <h1 class="text-[#fff] font-manrope lg:text-[28px] text-justify font-extrabold lg:pt-[95px] pt-[70px] pb-4 lg:pl-[42px] pl-[20px]">Junior Program</h1>
+
+            <p class="lg:w-[495px] sm:w-auto mx-auto text-[#fff] font-manrope lg:text-base sm:text-[14px] text-justify font-medium pb-4 lg:px-12 px-5">Forestville Hockey Club fields teams in all junior age groups in the Hockey SA Metro Competition which runs during terms 2 and 3 of the school year.</p>
+             <a class="lg:text-xl text-lg btn bg-btn  text-[#fff] lg:px-5 lg:py-[10px] lg:ml-[42px] ml-[20px] lg:pb-10 ">Register Now!</a>
+          </div>
+          
+        </div>
+      </section>
+      <!-- PROGRAMM-ENDS -->
 
 
-    
-</body>
+      <!-- PRDUCTS-START -->
+
+      <section class="container mx-auto lg:px-32 px-5 pb-[100px]">
+        <div class="border-dashed border-y-[1px] border-[#13131833]">
+          <h1 class="text-first font-manrope lg:text-4xl sm:text-[22px] text-center font-extrabold pt-[32px]">Our New Products</h1>
+          <p class="lg:w-[607px] sm:w-auto mx-auto text-silver font-manrope text-base font-medium text-center pt-[24px] pb-[32px]">
+            All pieces feature the same design so any cut or piece can be worn by any player, and on the women's side players now have the choice of Singlet or Short Sleeve ...
+          </p>
+        </div>
+
+        <!-- 1 -->
+        <div class="lg:flex justify-between items-center pt-[48px]">
+
+          <div class="lg:flex justify-between items-center  lg:w-[480px] sm:w-auto lg:h-[218px] sm:h-auto gap-5 rounded-[16px] border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            
+            <div class=""><img src="./Images/5.png" alt="" class="lg:w-[180px] w-full h-[172px]  rounded-xl" /></div>
+
+            <div class="lg:w-[275px] sm:w-auto lg:h-[169px] sm:h-auto  mt-4">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[13px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="lg:flex justify-between items-center w-full">
+              <a class="lg:text-[14px] text-[13px] font-bold text-btn">Price - $22.00</a>
+              
+              <div class="text-para font-manrope text-base font-medium lg:pt-0 pt-4">
+                <a href="" class="text-para font-manrope text-base font-medium  lg:pl-[18px] "><i class="icofont-cart"></i></a>
+                
+                Delivery Fee : Free
+              
+              </div>
+            </div>
+           
+            </div>
+          </div>
+
+          <!-- 1/2 -->
+          <div class="lg:flex justify-between items-center  lg:w-[480px] sm:w-auto lg:h-[218px] sm:h-auto gap-5 rounded-[16px] border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            
+            <div class=""><img src="./Images/6.png" alt="" class="lg:w-[180px] w-full h-[172px]  rounded-xl" /></div>
+
+            <div class="lg:w-[275px] sm:w-auto lg:h-[169px] sm:h-auto  mt-4">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[13px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="lg:flex justify-between items-center w-full">
+              <a class="lg:text-[14px] text-[13px] font-bold text-btn">Price - $22.00</a>
+              <div class="text-para font-manrope text-base font-medium lg:pt-0 pt-4">
+                <a href="" class="text-para font-manrope text-base font-medium  lg:pl-[18px] "><i class="icofont-cart"></i></a>
+                
+                Delivery Fee : Free
+              
+              </div>
+            </div>
+           
+            </div>
+
+
+          </div>
+          
+        
+        
+         
+        </div>
+
+        <!-- 2 -->
+         
+        <div class="lg:flex justify-between items-center pt-[48px]">
+
+          <div class="lg:flex justify-between items-center  lg:w-[480px] sm:w-auto lg:h-[218px] sm:h-auto gap-5 rounded-[16px] border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            
+            <div class=""><img src="./Images/7.png" alt="" class="lg:w-[180px] w-full h-[172px] object-cover rounded-xl" /></div>
+
+            <div class="lg:w-[275px] sm:w-auto lg:h-[169px] sm:h-auto  mt-4">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[13px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="lg:flex justify-between items-center w-full">
+              <a class="lg:text-[14px] text-[13px] font-bold text-btn">Price - $22.00</a>
+              <div class="text-para font-manrope text-base font-medium lg:pt-0 pt-4">
+                <a href="" class="text-para font-manrope text-base font-medium  lg:pl-[18px] "><i class="icofont-cart"></i></a>
+                
+                Delivery Fee : Free
+              
+              </div>
+            </div>
+           
+            </div>
+          </div>
+
+          <!-- 1/2 -->
+          <div class="lg:flex justify-between items-center  lg:w-[480px] sm:w-auto lg:h-[218px] sm:h-auto gap-5 rounded-[16px] border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            
+            <div class=""><img src="./Images/8.png" alt="" class="lg:w-[180px] w-full h-[172px] object-cover rounded-xl" /></div>
+
+            <div class="lg:w-[275px] sm:w-auto lg:h-[169px] sm:h-auto  mt-4">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[13px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="lg:flex justify-between items-center w-full">
+              <a class="lg:text-[14px] text-[13px] font-bold text-btn">Price - $22.00</a>
+              <div class="text-para font-manrope text-base font-medium lg:pt-0 pt-4">
+                <a href="" class="text-para font-manrope text-base font-medium  lg:pl-[18px] "><i class="icofont-cart"></i></a>
+                
+                Delivery Fee : Free
+              
+              </div>
+            </div>
+           
+            </div>
+
+
+          </div>
+          
+        
+        
+         
+        </div>
+
+        <!-- 3 -->
+        <div class="lg:flex justify-between items-center pt-[48px]">
+
+          <div class="lg:flex justify-between items-center  lg:w-[480px] sm:w-auto lg:h-[218px] sm:h-auto gap-5 rounded-[16px] border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            
+            <div class=""><img src="./Images/9.png" alt="" class="lg:w-[180px] w-full h-[172px] object-cover rounded-xl" /></div>
+
+            <div class="lg:w-[275px] sm:w-auto lg:h-[169px] sm:h-auto  mt-4">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[13px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="lg:flex justify-between items-center w-full">
+              <a class="lg:text-[14px] text-[13px] font-bold text-btn">Price - $22.00</a>
+              <div class="text-para font-manrope text-base font-medium lg:pt-0 pt-4">
+                <a href="" class="text-para font-manrope text-base font-medium  lg:pl-[18px] "><i class="icofont-cart"></i></a>
+                
+                Delivery Fee : Free
+              
+              </div>
+            </div>
+           
+            </div>
+          </div>
+
+          <!-- 1/2 -->
+          <div class="lg:flex justify-between items-center  lg:w-[480px] sm:w-auto lg:h-[218px] sm:h-auto gap-5 rounded-[16px] border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            
+            <div class=""><img src="./Images/10.png" alt="" class="lg:w-[180px] w-full h-[172px] object-cover rounded-xl" /></div>
+
+            <div class="lg:w-[275px] sm:w-auto lg:h-[169px] sm:h-auto  mt-4">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[13px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="lg:flex justify-between items-center w-full">
+              <a class="lg:text-[14px] text-[13px] font-bold text-btn">Price - $22.00</a>
+              <div class="text-para font-manrope text-base font-medium lg:pt-0 pt-4">
+                <a href="" class="text-para font-manrope text-base font-medium  lg:pl-[18px] "><i class="icofont-cart"></i></a>
+                
+                Delivery Fee : Free
+              
+              </div>
+            </div>
+           
+            </div>
+
+
+          </div>
+          
+        
+        
+         
+        </div>
+
+
+
+<!-- 
+        <div class="lg:flex justify-between items-center pt-[48px]">
+          <div class="flex justify-between items-center  w-[480px] h-[218px] gap-5 rounded-[16px]
+          border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            <div class=""><img src="./Images/7.png" alt="" class="w-[180px] h-[172px] object-cover rounded-xl" /></div>
+            <div class="w-[275px] h-[169px]">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">Cap For Hockeys</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[16px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="flex justify-between items-center w-full">
+              <a class="lg:text-[14px] sm:text-lg font-bold text-btn">Price - $22.00</a>
+              <a href="" class="text-para font-manrope text-base font-medium  pl-[18px]"><i class="icofont-cart"></i></a>
+              <p class="text-para font-manrope text-base font-medium">Delivery Fee : Free</p>
+            </div>
+           
+            </div>
+
+
+          </div>
+
+          <div class="flex justify-between items-center  w-[480px] h-[218px] gap-5 rounded-[16px]
+          border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            <div class=""><img src="./Images/8.png" alt="" class="w-[180px] h-[172px] object-cover rounded-xl" /></div>
+            <div class="w-[275px] h-[169px]">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[16px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="flex justify-between items-center w-full">
+              <a class="lg:text-[14px] sm:text-lg font-bold text-btn">Price - $22.00</a>
+              <a href="" class="text-para font-manrope text-base font-medium  pl-[18px]"><i class="icofont-cart"></i></a>
+              <p class="text-para font-manrope text-base font-medium">Delivery Fee : Free</p>
+            </div>
+           
+            </div>
+
+
+          </div>
+        
+        
+         
+        </div>
+        <div class="lg:flex justify-between items-center pt-[48px]">
+          <div class="flex justify-between items-center  w-[480px] h-[218px] gap-5 rounded-[16px]
+          border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            <div class=""><img src="./Images/9.png" alt="" class="w-[180px] h-[172px] object-cover rounded-xl" /></div>
+            <div class="w-[275px] h-[169px]">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[16px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="flex justify-between items-center w-full">
+              <a class="lg:text-[14px] sm:text-lg font-bold text-btn">Price - $22.00</a>
+              <a href="" class="text-para font-manrope text-base font-medium  pl-[18px]"><i class="icofont-cart"></i></a>
+              <p class="text-para font-manrope text-base font-medium">Delivery Fee : Free</p>
+            </div>
+           
+            </div>
+
+
+          </div>
+
+          <div class="flex justify-between items-center  w-[480px] h-[218px] gap-5 rounded-[16px]
+          border-[1px] border-[#0D0D121A] p-3 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            <div class=""><img src="./Images/10.png" alt="" class="w-[180px] h-[172px] object-cover rounded-xl" /></div>
+            <div class="w-[275px] h-[169px]">
+                <div class="rating pb-3">
+                    <a href="" class="w-6 h-6 text-[orange] font-manrope text-base font-medium text-start "><i class="icofont-star"></i></a>
+                    <a href="" class=" text-para font-manrope text-base font-medium text-start pl-[8px]">5.0</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-eye"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">20</a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[16px]"><i class="icofont-ui-love"></i></a>
+                    <a href="" class="text-para font-manrope text-base font-medium text-start pl-[8px]">200</a>
+                  </div>
+                
+            <h1 class="text-first font-manrope text-xl text-start font-extrabold pb-[16px]">World Cup Flags Football</h1>
+            <p class="text-silver font-manrope text-[15px] font-medium text-start pb-[16px]"> Hockey SA Metro Competition which runs during terms the school year.</p>
+            
+            <div class="flex justify-between items-center w-full">
+              <a class="lg:text-[14px] sm:text-lg font-bold text-btn">Price - $22.00</a>
+              <a href="" class="text-para font-manrope text-base font-medium  pl-[18px]"><i class="icofont-cart"></i></a>
+              <p class="text-para font-manrope text-base font-medium">Delivery Fee : Free</p>
+            </div>
+           
+            </div>
+
+
+          </div>
+        
+        
+         
+        </div>
+ -->
+
+      </section>
+      <!-- PRODUCTS-ENDS -->
+
+       <!-- ClIENT-STARTS -->
+       <section class="container mx-auto lg:px-32 px-5 pb-[100px]">
+        <div class="border-dashed border-y-[1px] border-[#13131833] ">
+          <h1 class="text-first font-manrope lg:text-4xl sm:text-[22px] text-center font-extrabold pt-[32px]">Clients Question</h1>
+          <p class="lg:w-[607px] sm:w-auto mx-auto text-silver font-manrope text-base font-medium text-center pt-[24px] pb-[32px]">
+            Ask your clients these essential questions to create the best possible content for their SEO and content marketing campaigns.
+          </p>
+        </div>
+
+        <div class="lg:flex justify-between items-center  border-[1px] border-[#0D0D121A] mt-12 rounded-xl">
+
+          <div class="flex-1 p-8 rounded-2xl"><img src="./Images/11.png" alt="" class=""></div>
+
+        <div class="flex-1 p-5">
+
+          <div class="collapse collapse-plus  border-b-[1px] border-[#0D0D121A] rounded-none ">
+            <input type="radio" name="my-accordion-3" checked="checked " class="" /> 
+            <div class="collapse-title text-xl font-bold text-first font-manrope p-0 pt-3">
+              Our Equipment
+            </div>
+            <div class="collapse-content p-0"> 
+              <p class="text-[#13131899] text-base font-manrope font-normal">Our Equipment means any site data controller you to use the Services and which you do not purchase from us.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus  border-b-[1px] border-[#0D0D121A] rounded-none ">
+            <input type="radio" name="my-accordion-3" checked="checked " class="" /> 
+            <div class="collapse-title text-xl font-bold text-first font-manrope p-0 pt-3">
+              Hockey Training
+            </div>
+            <div class="collapse-content p-0"> 
+              <p class="text-[#13131899] text-base font-manrope font-normal">Our Equipment means any site data controller you to use the Services and which you do not purchase from us.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus  border-b-[1px] border-[#0D0D121A] rounded-none ">
+            <input type="radio" name="my-accordion-3" checked="checked " class="" /> 
+            <div class="collapse-title text-xl font-bold text-first font-manrope p-0 pt-3">
+              Private Lessons
+            </div>
+            <div class="collapse-content p-0"> 
+              <p class="text-[#13131899] text-base font-manrope font-normal">Our Equipment means any site data controller you to use the Services and which you do not purchase from us.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus  border-b-[1px] border-[#0D0D121A] rounded-none ">
+            <input type="radio" name="my-accordion-3" checked="checked " class="" /> 
+            <div class="collapse-title text-xl font-bold text-first font-manrope p-0 pt-3">
+              Ski Touring
+            </div>
+            <div class="collapse-content p-0"> 
+              <p class="text-[#13131899] text-base font-manrope font-normal">Our Equipment means any site data controller you to use the Services and which you do not purchase from us.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus  border-b-[1px] border-[#0D0D121A] rounded-none ">
+            <input type="radio" name="my-accordion-3" checked="checked " class="" /> 
+            <div class="collapse-title text-xl font-bold text-first font-manrope p-0 pt-3">
+              Booking
+            </div>
+            <div class="collapse-content p-0"> 
+              <p class="text-[#13131899] text-base font-manrope font-normal">Our Equipment means any site data controller you to use the Services and which you do not purchase from us.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus   ">
+            <input type="radio" name="my-accordion-3" checked="checked " class="" /> 
+            <div class="collapse-title text-xl font-bold text-first font-manrope p-0 pt-3">
+            Pricings
+            </div>
+            <div class="collapse-content p-0"> 
+              <p class="text-[#13131899] text-base font-manrope font-normal">Our Equipment means any site data controller you to use the Services and which you do not purchase from us.</p>
+            </div>
+          </div>
+          
+        </div>
+       
+      </div>
+
+
+       </section>
+       <!-- ClIENT-ENDS -->
+
+       <!-- TOUCH-STARTS -->
+
+       <section class="container mx-auto lg:px-32 px-5 pb-[100px]">
+        <div class="border-dashed border-y-[1px] border-[#13131833]">
+          <h1 class="text-first font-manrope lg:text-4xl sm:text-[22px] text-center font-extrabold pt-[32px]">Get In Touch</h1>
+          <p class="lg:w-[607px] sm:w-auto mx-auto text-silver font-manrope text-base font-medium text-center pt-[24px] pb-[32px]">
+            Some ideas for what you can say instead of 'Contact Us' include: Drop us a line. Get in touch. Reach out.
+          </p>
+        </div>
+
+        <div class="lg:flex justify-between items-center pt-12">
+          <div class="lg:w-[350px] sm:w-auto border-[1px] border-[#0D0D121A] p-8 rounded-xl">
+            <div class=" bg-[#BCED6D1A] p-[32px] rounded-xl">
+              <img src="./Images/phone.png" alt="" class="w-12 h-12 ">
+              <p class="pt-5 text-color font-manrope text-base font-normal">Phone Number : 
+            <span class="text-first font-manrope lg:text-lg font-extrabold block">(+62) 123-321-543</span></p>
+            </div>
+
+            <div class=" bg-[#FDDD5F1A] p-[32px] rounded-xl my-6">
+              <img src="./Images/mail.png" alt="" class="w-12 h-12 ">
+              <p class="pt-5 text-color font-manrope text-base font-normal">Email : 
+                
+            <span class="text-first font-manrope lg:text-lg text-[14px] font-extrabold block">hockeys@support.com </span></p>
+            </div>
+
+            <div class=" bg-[#629CF31A] p-[32px] rounded-xl">
+              <img src="./Images/goggle.png" alt="" class="w-12 h-12 ">
+              <p class="pt-5 text-color font-manrope text-base font-normal">Location : 
+            <span class="text-first font-manrope lg:text-lg font-extrabold block">152/1 Mohakhali Wireless Gate </span></p>
+            </div>
+            
+          </div>
+
+
+
+          <div class="lg:w-[550px] lg:h-[698px]">
+           <div class="lg:flex justify-between items-center">
+            <label class="form-control w-full max-w-xs mr-[8px] ">
+              <div class="label">
+                <span class="label-text text-first font-manrope text-xl text-center lg:pb-[15px] lg:pt-0 pt-[10px] font-bold">Your Name</span>               
+              </div>
+              <input type="text" placeholder="Enter your full name" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="form-control w-full max-w-xs">
+              <div class="label">
+                <span class="label-text text-first font-manrope text-xl text-center lg:pb-[15px] lg:pt-0 pt-[10px] font-bold">Your Email</span>               
+              </div>
+              <input type="text" placeholder="Enter your email" class="input input-bordered w-full max-w-xs" />
+            </label>
+           
+          </div>
+           <div class="lg:flex justify-between items-center">
+            <label class="form-control w-full max-w-xs mr-[8px] pt-5">
+              <div class="label">
+                <span class="label-text text-first font-manrope text-xl text-center lg:pb-[15px] lg:pt-0 pt-[10px] font-bold">Subject</span>               
+              </div>
+              <input type="text" placeholder="Enter your subject" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="form-control w-full max-w-xs pt-5">
+              <div class="label">
+                <span class="label-text text-first font-manrope text-xl text-center lg:pb-[15px] lg:pt-0 pt-[10px] font-bold">Phone Number</span>               
+              </div>
+              <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
+            </label>
+           
+          </div>
+          
+          
+          <label class="form-control pt-10 ">
+            <div class="label">
+              <span class="label-text text-first font-manrope text-xl text-center font-bold"> Message</span>
+             
+            </div>
+            <textarea class="textarea textarea-bordered h-[300px]" placeholder="Write your message"></textarea>
+            
+          </label>
+
+           <button class="w-full h-auto btn bg-btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 py-3 text-[#fff] font-manrope text-xl text-center font-bold">Send Message</button>
+        </div>
+        </section>
+
+       <!-- TOUCH-ENDS -->
+
+       <!-- SOCIAL-STARTS -->
+       <section class="container mx-auto lg:px-32 px-5 pb-[100px]">
+        <div class="bg-[#0D0D1208] h-[150px] relative rounded-2xl">
+          <h1 class="text-first font-manrope text-4xl text-center font-extrabold pt-[35px]">Social Media</h1>
+          <div class="lg:absolute absolute top-[60%] lg:right-[40%] right-[22%] lg:w-[175px] ">
+            <a href="" class="text-[1.8rem]"><i class="icofont-twitter"></i></a>
+          <a href="" class="text-[2rem] pl-[10px]"><i class="icofont-facebook"></i></i></a>
+          <a href="" class="text-[2rem] pl-[10px]"><i class="icofont-instagram"></i></a>
+          <a href="" class="text-[2rem] pl-[10px]"><i class="icofont-github"></i></a>
+          </div>
+        </div>
+        </section>
+
+
+       <!-- SOCIAL-ENDS -->
+
+       <!-- FOOTER-STARTS -->
+
+       <section class="w-full">
+        <footer class="footer p-10 bg-first text-base-content container mx-auto lg:px-32 px-5 pb-[100px]">
+       
+          <nav class="lg:w-[303px] sm:w-auto ">
+
+            <header class="text-[#fff] lg:mx-0 mx-auto font-manrope lg:text-[28px] text-[24px] text-center font-extrabold pt-[100px]">Get In Touch</header> 
+
+            <p class="lg:w-[303px] text-[#FFFFFF99] font-manrope text-[16px] lg:text-start text-center font-medium pt-[20px] pb-[20px]">Some ideas for what you can say instead of 'Contact Us' include: Drop us a line. Get in touch. Reach out.</p>
+            
+            <a class="link link-hover text-[#FFFFFF99] hover:no-underline font-manrope text-[16px] font-medium pt-[10px] pb-[10px] lg:mx-0 mx-auto"><span class="text-btn pr-4"><i class="icofont-email"></i></span>hockeys@support.com</a>
+            <a class="link link-hover text-[#FFFFFF99] hover:no-underline font-manrope text-[16px] font-medium pt-[8px] lg:mx-0 mx-auto"><span class="text-btn pr-4"><i class="icofont-phone"></i></span>(+62) 123-321-543</a>
+           
+          </nav>  
+         <div class="flex justify-between items-center">
+          <nav class="lg:w-[200px] lg:pl-12 pl-5 grid">
+            <header class=" text-[#fff] capitalize font-manrope text-[18px] font-bold pt-[100px] pb-3">Company</header> 
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">About us</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">Leadership</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">Careers</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">News & Article</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">Legal Notice</a>
+          </nav> 
+         
+  
+          <nav class="lg:w-[200px] lg:pl-12 pl-5 grid">
+            <header class=" text-[#fff] capitalize font-manrope text-[18px]  font-bold pt-[60px] pb-3">Support</header> 
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">Help Center</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">FAQ</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">Ticket Support</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] font-medium py-3 hover:no-underline ">Contact Us</a>
+            
+          </nav> 
+         </div>
+         
+          <nav class="lg:w-[200px] lg:pl-12 lg:ml-0 ml-14 lg:place-items-start place-items-center ">
+            <header class=" text-[#fff] capitalize font-manrope text-[18px] text-center font-bold lg:pt-[100px] pb-3">Services</header> 
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] text-center font-medium py-1 hover:no-underline ">Academy</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] text-center font-medium py-1 hover:no-underline "> Group Lesson</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] text-center font-medium py-1 hover:no-underline "> Private Lesson</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] text-center font-medium py-1 hover:no-underline ">Hockeys for kids</a>
+            <a class="link link-hover text-[#FFFFFF99] font-manrope text-[16px] text-center font-medium py-1 hover:no-underline ">Hockeys for Adult </a>
+          </nav> 
+  
+          
+        </footer>
+       </section>
+       
+
+       <!-- FOOTER-STARTS --
+
+    </main>
+  </body>
 </html>
